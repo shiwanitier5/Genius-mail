@@ -22,7 +22,7 @@ chrome.identity.getAuthToken({
     var x = new XMLHttpRequest();
     x.open('GET', 'https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token=' + token);
     x.onload = function() {
-        alert(x.response);
+        console.log(x.response);
     };
     x.send();
 });
