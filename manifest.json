@@ -1,0 +1,30 @@
+{
+   "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+   "oauth2": {
+      "client_id": "28972432101-48ac89f1731kh36khh16gtn2e257c3bo.apps.googleusercontent.com",
+      "scopes": [
+          "https://www.googleapis.com/auth/userinfo.email"
+      ]
+  },
+   
+   "content_scripts": [ {
+    
+      "js": [ "inboxsdk.js", "geniusmail.js", "jquery.js", "jquery.bpopup.min.js", "select2.full.js", "selectize.js" ],
+      "matches": [ "http://mail.google.com/*", "https://mail.google.com/*", "https://inbox.google.com/*", "http://inbox.google.com/*" ],
+      "run_at": "document_end"
+   } ],
+   
+   "description": "A powerful mass email and mail merge system for Gmail.",
+  
+   "key": "jnlfdbfmijcnpnhhndkdamainmkhienh",
+   "manifest_version": 2,
+   "name": "GMass: Powerful mail merge for Gmail",
+   "permissions": [ "https://www.gmass.co/", "http://www.gmass.co/","identity" ],
+   
+   "short_name": "GMass",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "5.0.5"
+}
